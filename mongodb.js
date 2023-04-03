@@ -1,0 +1,18 @@
+'use strict';
+
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useFindAndModify: false
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Mongodb Connection established');
+});
+
+module.exports={
+	mongoose
+}
