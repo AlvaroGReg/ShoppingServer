@@ -6,7 +6,6 @@ var helper = require('./helpers/helper');
 
 //mongodb
 var Users = require('./schemas/Users');
-var LoginAttemps = require('./schemas/LoginAttemps');
 const mongoose = require('./mongodb').mongoose;
 
 

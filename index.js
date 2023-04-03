@@ -5,7 +5,6 @@
 
 var app = require('express')();
 var http = require('http');
-var fs = require('fs');
 var server = http.Server(app);
 var bodyParser = require('body-parser');
 var sanitize = require("mongo-sanitize");

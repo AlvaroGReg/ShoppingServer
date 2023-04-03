@@ -2,7 +2,6 @@
 
 var index = require('../index');
 
-var ItemsStore = require('../schemas/ItemsStore');
 const mongoose = require('../mongodb').mongoose;
 
 module.exports = {
