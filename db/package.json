@@ -1,0 +1,17 @@
+{
+  "name": "mi-aplicacion-web",
+  "version": "1.0.0",
+  "description": "Mi aplicación web en Glitch.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
+    "mysql": "^2.18.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
