@@ -33,8 +33,43 @@ h1,h2,h3{
 }
 
 /*HEADER*/
+header>.header-row{
+    display: flex;
+    justify-content: space-between;
+}
+
 header>div>img{
     width: 40px;
+    height: 40px;
+}
+
+header>div>.header-right{
+    display: flex;
+}
+
+header>div>.header-right>.options-menu{
+    height: 2.5em;
+    overflow: hidden;
+    transition: 0.8s;
+}
+header>div>.header-right>.options-menu>.desplegable-options{
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
+
+/*TOGGLE MENU*/
+.show{
+    height: 200px;
+}
+
+header>div>.header-right>.options-menu>.options>.bx{
+    font-size: 2.5em;
+}
+header>div>ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 /*FOOTER*/
