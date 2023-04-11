@@ -1,4 +1,4 @@
-let db = require("./db/connection");
+let db = require("./connection");
 const express = require('express');
 const app = express();
 
@@ -23,7 +23,7 @@ function manejarRutas(ruta, archivoHTML) {
 }
 
 // Llamar a la función para definir las rutas y archivos HTML
-manejarRutas('/', 'index.html',); // Ruta para la página de inicio
+manejarRutas('/', './web/index.html',); // Ruta para la página de inicio
 manejarRutas('/formulario', '')
 //manejarRutas('/contacto', 'contacto.html'); // Ruta para la página de contacto
 // Agregar más llamadas a la función para definir más rutas y archivos HTML
