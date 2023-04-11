@@ -2,10 +2,10 @@ const mysql = require('mysql');
 
 // Crear una conexión con la base de datos MySQL
 const db = mysql.createConnection({
-  host: 'sql214.main-hosting.eu',
-  user: 'u345394248_lernek_shoppin',
-  password: 'iQA0>tZh$9hR',
-  database: 'u345394248_lernek_shoppin'
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE
 });
 
 function addData(req,res){
