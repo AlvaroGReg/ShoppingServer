@@ -23,7 +23,10 @@ function addData(req,res){
 
     // Ejecutar consulta SQL con parámetros preparados
     const sql = 'INSERT INTO `table-test` (name, tlf, soltero) VALUES (?, ?, ?)';
-  
+	/*
+	db.query ejecuta en la base de datos la sentencia que está justo encima, en caso de que surja cualquier error, devuelves
+	error 500 al cliente
+	*/
     db.query(sql, [nombre, telefono, esSoltero], (err, result) => {
         if (err) {
 
