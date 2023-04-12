@@ -5,7 +5,7 @@ const app = express();
 // Configurar Express para manejar el formulario
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('/public'));
 
 // Definir una función para manejar las rutas y archivos HTML
 function manejarRutas(ruta, archivoHTML) {
