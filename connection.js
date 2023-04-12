@@ -39,4 +39,4 @@ function addData(req,res){
         // Cerrar la conexión con la base de datos
   //db.end();
 // Exportar la función addData para su uso en otros archivos
-module.exports = { addData };
+module.exports = { addData, getTable };

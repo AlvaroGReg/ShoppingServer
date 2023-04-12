@@ -17,6 +17,8 @@ function manejarRutas(ruta, archivoHTML) {
     if(ruta=='/formulario'){
      //res.send('¡Mensaje enviado con éxito!'); 
       db.addData(req,res);
+    }else if(ruta=='/getdata'){
+      db.getTable('kittens');
     }
     //res.send('¡Mensaje enviado con éxito!'); // Enviar una respuesta al cliente
   });
@@ -24,7 +26,8 @@ function manejarRutas(ruta, archivoHTML) {
 
 // Llamar a la función para definir las rutas y archivos HTML
 manejarRutas('/', './web/index.html',); // Ruta para la página de inicio
-manejarRutas('/formulario', '')
+manejarRutas('/formulario', '');
+manejarRutas('/getdata');
 //manejarRutas('/contacto', 'contacto.html'); // Ruta para la página de contacto
 // Agregar más llamadas a la función para definir más rutas y archivos HTML
 

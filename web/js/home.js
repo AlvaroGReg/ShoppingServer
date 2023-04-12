@@ -1,3 +1,7 @@
 window.addEventListener('load', function () {
-    console.log("Home loaded");
+
+    $.get('/getdata','kittens',function(respuesta){
+
+        console.log('Respuesta del servidor:', respuesta);
+    })
 });
