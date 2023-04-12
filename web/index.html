@@ -1,49 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Formulario</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catazon</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
+
 <body>
-    <h1>Formulario</h1>
-    <form id="formulario">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        <br>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono">
-        <br>
-        <label for="soltero">Soltero:</label>
-        <input type="checkbox" id="soltero" name="soltero">
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+    <header>
+        <div class="headertop">
+            <img src="res/logo/head logo.png" alt="Logo AGREG">
 
-    <script>
-        // Manejar el evento de envío del formulario
-        document.getElementById('formulario').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+            <div class="searcher">
+                <form action="search">
+                    <select name="categoryselector" id="categoryselector">
+                        <option value="all" selected>Todos</option>
+                        <option value="cats" selected>Gatos</option>
+                        <option value="food" selected>Comida</option>
+                        <option value="clay" selected>Arena</option>
+                        <option value="toys" selected>Juguetes</option>
+                    </select>
+                    <input type="text">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
 
-            // Obtener los datos del formulario
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const esSoltero = document.getElementById('soltero').checked;
+            <div class="iconsdiv">
+                <div class="cart">
+                    <i class='bx bxs-cart'></i>
+                </div>
+                <div class="menu-toggle">
+                    <i class='bx bx-menu'></i>
+                    <div class="optionsmenu">
 
-            // Crear un objeto con los datos a enviar
-            const datos = {
-                nombre: nombre,
-                telefono: telefono,
-                esSoltero: esSoltero
-            };
+                        <ul>
+                            <a href="">
+                                <li>
+                                    <p>Cuenta</p>
+                                </li>
+                            </a>
+                        </ul>
 
-            // Realizar una solicitud POST al servidor
-            $.post('/formulario', datos, function(respuesta) {
-                // Manejar la respuesta del servidor
-                console.log('Respuesta del servidor:', respuesta);
-                // Aquí puedes realizar las acciones necesarias con la respuesta recibida del servidor
-            });
-        });
-    </script>
+                        <ul>
+                            <a href="">
+                                <li>
+                                    <p>Pedidos</p>
+                                </li>
+                            </a>
+                        </ul>
+
+                        <ul>
+                            <a href="">
+                                <li>
+                                    <p>Login/Logout</p>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerbottom">
+            <ul>
+
+                <a href="">
+                    <li>
+                        <p>Más vendidos</p>
+                    </li>
+                </a>
+
+                <a href="">
+                    <li>
+                        <p>Todo</p>
+                    </li>
+                </a>
+
+                <a href="">
+                    <li>
+                        <p>Gatos</p>
+                    </li>
+                </a>
+
+                <a href="">
+                    <li>
+                        <p>Comida</p>
+                    </li>
+                </a>
+
+                <a href="">
+                    <li>
+                        <p>Arena</p>
+                    </li>
+                </a>
+
+                <a href="">
+                    <li>
+                        <p>Jueguetes</p>
+                    </li>
+                </a>
+
+            </ul>
+        </div>
+    </header>
+    <main id="main">
+
+    </main>
+    <footer>
+        <img src="res/logo/footer img.png" alt="AGREG logo">
+    </footer>
 </body>
+<script src="js/main.js"></script>
 </html>

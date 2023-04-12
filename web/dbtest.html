@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono">
+        <br>
+        <label for="soltero">Soltero:</label>
+        <input type="checkbox" id="soltero" name="soltero">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        // Manejar el evento de envío del formulario
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+            // Obtener los datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const esSoltero = document.getElementById('soltero').checked;
+
+            // Crear un objeto con los datos a enviar
+            const datos = {
+                nombre: nombre,
+                telefono: telefono,
+                esSoltero: esSoltero
+            };
+
+            // Realizar una solicitud POST al servidor
+            $.post('/formulario', datos, function(respuesta) {
+                // Manejar la respuesta del servidor
+                console.log('Respuesta del servidor:', respuesta);
+                // Aquí puedes realizar las acciones necesarias con la respuesta recibida del servidor
+            });
+        });
+    </script>
+</body>
+</html>

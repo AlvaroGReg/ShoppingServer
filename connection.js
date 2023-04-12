@@ -8,6 +8,12 @@ const db = mysql.createConnection({
   database: process.env.DATABASE
 });
 
+function getTable(tableName){
+ const sql = 'SELECT * FROM `'+ tableName +'` WHERE 1';
+
+ console.log(db.query(sql));
+}
+
 function addData(req,res){
 
  // Obtener datos del formulario
