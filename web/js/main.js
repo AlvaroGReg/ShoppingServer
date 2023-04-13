@@ -1,4 +1,4 @@
-//ONLOAD INDEX
+//ONLOAD MAIN
 window.addEventListener('load', function () {
 
     $.get('/getdata', function (respuesta) {
@@ -10,10 +10,8 @@ window.addEventListener('load', function () {
             let newIMG = document.createElement('img');
             let newName = document.createElement('p')
 
+            newSection.setAttribute("class", "sectionoffers");
             newContainer.setAttribute("class", "listcontainer");
-            newArticle.setAttribute("class", "listitem");
-            newIMG.setAttribute("class", "itemimg");
-            newName.setAttribute("class", "itemname");
 
             newIMG.src = element.cat_img;
             newName.innerHTML = element.cat_name;

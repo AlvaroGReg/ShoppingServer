@@ -55,6 +55,40 @@ header>.headerbottom>ul{
     justify-content: space-evenly;
 }
 
+/*HOME*/
+
+.sectionoffers{
+    height: 40%;
+
+}
+
+.sectionoffers>.listcontainer{
+    overflow: auto;
+    overflow-y: hidden;
+    display: flex;
+    position: relative;
+
+}
+
+.sectionoffers>.listcontainer>article{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+    overflow: auto;
+}
+.sectionoffers>.listcontainer>article:hover{
+    scale: 1.1;
+}
+
+.sectionoffers>.listcontainer>article>img{
+    height: 300px;
+}
+
+
+.sectionoffers>.listcontainer>article>p{
+    
+
+}
+
 /*FOOTER*/
 footer{
     display: flex;
