@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catazon</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/mystyle.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="headertop">
-            <img src="./res/logo/head logo.png" alt="Logo AGREG">
+            <img src="res/logo/head-logo.png" alt="Logo AGREG">
 
             <div class="searcher">
                 <form action="search">
@@ -31,10 +32,10 @@
 
             <div class="iconsdiv">
                 <div class="cart">
-                    <i class='bx bxs-cart'></i>
+                    <i class="bx bxs-cart"></i>
                 </div>
                 <div class="menu-toggle">
-                    <i class='bx bx-menu'></i>
+                    <i class="bx bx-menu"></i>
                     <div class="optionsmenu">
 
                         <ul>
@@ -43,22 +44,26 @@
                                     <p>Cuenta</p>
                                 </li>
                             </a>
-                        </ul>
 
-                        <ul>
                             <a href="">
                                 <li>
                                     <p>Pedidos</p>
                                 </li>
-                            </a>
-                        </ul>
+                             </a>
 
-                        <ul>
                             <a href="">
                                 <li>
                                     <p>Login/Logout</p>
                                 </li>
                             </a>
+                          
+                          <a onclick="chargeMain('admin')">
+                          <li>
+                            <p>
+                              OPEN ADMIN
+                            </p>
+                            </li>
+                          </a>
                         </ul>
                     </div>
                 </div>
@@ -106,11 +111,11 @@
             </ul>
         </div>
     </header>
-    <main id="main">
+    <main id="mainframe">
 
     </main>
     <footer>
-        <img src="./res/logo/footer img.png" alt="AGREG logo">
+        <img src="res/logo/footer-img.png" alt="AGREG logo">
     </footer>
 </body>
 <script src="./js/main.js"></script>

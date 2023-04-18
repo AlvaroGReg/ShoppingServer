@@ -17,9 +17,12 @@ app.get('(/*)?', (req, res) => {
 // Definir una función para manejar las rutas y archivos HTML
 //function manejarRutas(ruta, archivoHTML) {
   app.get('(/*)?', (req, res) => {
-    fs.exists(__dirname + "/web/" + req.url , function (exist) {
+    
+    //res.send(req.url)
+    
+    fs.exists(__dirname + "/web" + req.url , function (exist) {
       if (exist)
-        res.sendFile(__dirname + '/web/' + req.url);
+        res.sendFile(__dirname + '/web' + req.url);
       else
       {
           switch (req.url)
@@ -27,6 +30,9 @@ app.get('(/*)?', (req, res) => {
             case "/getdata":
               func.getAll(req, res);
               //return db.getTable('kittens'); // https://catazon.glitch.me/getdata
+              break;
+            case "/getproducts":
+              func.getAllProducts(req, res);
               break;
           }
       }

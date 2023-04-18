@@ -11,14 +11,20 @@ function get_best_sellers()
 }
 
 function getAll(req, res){
- const sql = 'SELECT * FROM `kittens` WHERE 1';
   //return "jajsjas no es una funcion";
-  db.query(sql, function (err, result, fields) {
+  db.query(getAllProducts, function (err, result, fields) {
     //console.log(result);
     res.send(result);
   });
 }
 
+function getAllProducts(req,res){
+  const sql = 'SELECT table_name FROM information_schema.tables WHERE table_schema = "u345394248_lernek_shoppin"';
+  
+  db.query(sql, function(err,result,fields){
+    res.send(result);
+  })
+}
 
 function addData(req,res){
 
@@ -49,5 +55,6 @@ function addData(req,res){
 module.exports = { 
   get_best_sellers, 
   getAll,
-  addData
+  addData,
+  getTables
 };
